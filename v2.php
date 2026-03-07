@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $PASSWORD = "admin123";  // default Password
 session_start();
 define('SCRIPT_DIR', __DIR__);
